@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-23",
+  "scope": "Fedora host checks plus isolated Arch container with real CachyOS headers; not a booted CachyOS hardware test",
+  "software_tests": {
+    "count": 36,
+    "fedora": "passed",
+    "arch_container": "passed"
+  },
+  "fedora": {
+    "kernel": "7.2.11-200.fc44.x86_64",
+    "module_build": "passed",
+    "read_only_preflight": "passed",
+    "gtk_mocked_lifecycle": "passed"
+  },
+  "arch_container": {
+    "image": "docker.io/library/archlinux:base",
+    "kernel_headers": "7.2.11-arch1-1",
+    "module_build": "passed",
+    "gtk4": "4.24.1",
+    "python": "3.14.8",
+    "python_gobject": "3.58.1",
+    "python_cairo": "1.29.2",
+    "gtk_cairo_imports": "passed",
+    "gtk_xvfb_lifecycle": "passed",
+    "systemd_unit_validation": "passed"
+  },
+  "cachyos": {
+    "headers_package": "linux-cachyos-headers-7.2.7-1-x86_64.pkg.tar.zst",
+    "headers_sha256": "14cdee3a743e7792200331c530bd71eb0b1b244b06c7244308afe3c67b869229",
+    "kernel": "7.2.7-1-cachyos",
+    "kernel_compiler": "clang 22.1.8",
+    "test_compiler": "clang 23.1.3",
+    "lto": "CONFIG_LTO_CLANG_THIN=y",
+    "make_toolchain": "LLVM=1",
+    "dkms_version": "3.4.4",
+    "dkms_build": "passed",
+    "dkms_install": "passed in container only",
+    "dkms_status": "neo-control/0.1.0, 7.2.7-1-cachyos, x86_64: installed",
+    "vermagic": "7.2.7-1-cachyos SMP preempt mod_unload",
+    "warnings": [
+      "Compiler version differs from kernel build compiler; build and installation succeeded."
+    ]
+  },
+  "not_tested": [
+    "Booting CachyOS on physical laptop",
+    "Loading the CachyOS module into a running CachyOS kernel",
+    "Physical fan/RGB/profile/battery behavior on CachyOS",
+    "Boot-image regeneration on a CachyOS installation",
+    "Secure Boot key enrollment"
+  ],
+  "hardware_writes_during_these_checks": false
+}

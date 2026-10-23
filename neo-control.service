@@ -6,7 +6,7 @@ Before=display-manager.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/sbin/modprobe neo_control
+ExecStart=/opt/neo-control/load-driver.sh
 ExecStart=/opt/neo-control/set-permissions.sh
 ExecStop=/opt/neo-control/restore-auto.sh
 

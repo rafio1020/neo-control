@@ -13,9 +13,9 @@ for module in facer acer_wmi linuwu_sense; do
   }
 done
 if [[ -d /sys/module/neo_control ]]; then
-  /usr/sbin/rmmod neo_control
+  rmmod neo_control
 fi
-/usr/sbin/insmod "$PWD/kernel/neo_control.ko"
+insmod "$PWD/kernel/neo_control.ko"
 getent group linuwu_sense >/dev/null || groupadd --system linuwu_sense
 for attribute in fan_control profile keepalive battery_limit lighting zones; do
   chgrp linuwu_sense "/sys/devices/platform/neo-control/$attribute"

@@ -63,27 +63,64 @@ Follow-up verification: the user confirmed the fans became much louder during th
 - Resume/reboot behavior is implemented but has not been physically tested by suspending or rebooting this active session.
 - This driver deliberately accepts only exact DMI model `Predator PHN16-71`. Other models need their own verification.
 
-## Install or rebuild
+## Linux distribution compatibility
 
-Get the source:
+The GTK4 app and Acer WMI protocol are not Fedora-specific. The driver remains restricted to **Acer Predator PHN16-71** regardless of distribution.
+
+| Distribution | Status |
+|---|---|
+| Fedora with systemd | Hardware-tested on the original laptop; dependency and installation helpers included |
+| CachyOS with systemd | DKMS build and installation passed against real 7.2.7-1-cachyos Clang/ThinLTO headers in an Arch container; physical CachyOS boot/fan testing is pending |
+| Arch Linux and Arch-based systems with systemd | Clean Arch container passed kernel build against 7.2.11-arch1-1, GTK lifecycle and software tests; physical hardware testing pending |
+| Other Linux distributions | GUI/driver source may be portable, but automatic dependency/boot-image setup is not implemented |
+
+KDE Plasma, GNOME and Xfce can run the GTK4 app. There is no GNOME dependency for fan control. The PredatorSense shortcut must be configured separately in the chosen desktop. The hardware driver cannot be replaced by a standalone Flatpak or AppImage.
+
+## Install on CachyOS / Arch
+
+Start with an up-to-date installation. If Git is missing, install it with `sudo pacman -Syu --needed git`. **Reboot after a kernel upgrade before continuing**, so the running kernel and installed headers can match.
 
 ```sh
 git clone https://github.com/rafio1020/neo-control.git
 cd neo-control
+./install.sh --install-deps
 ```
 
-Run `./install.sh` as your normal desktop user from this directory. Fedora asks for administrator authentication to install the kernel driver. Requirements already present on this laptop: Python 3 with PyGObject/GTK4, GCC/make, DKMS, matching kernel development files, and membership in `linuwu_sense`.
-
-On a fresh machine, create the control group and add your desktop user before installing, then log out and back in:
+The dependency step uses `pacman -Syu --needed`, including a full system upgrade. It reads `/lib/modules/$(uname -r)/pkgbase` to select the matching headers, such as `linux-cachyos-headers`, `linux-cachyos-lts-headers`, `linux-cachyos-bmq-headers`, or `linux-zen-headers`. It also installs DKMS, the GTK4/Python/Cairo runtime, and GCC/LLVM build tools. **If this step updates your kernel, reboot, return to this directory, and continue:**
 
 ```sh
-sudo groupadd --system --force linuwu_sense
-sudo usermod -aG linuwu_sense "$USER"
+./install.sh --check
+./install.sh
 ```
 
-The installer stops if a competing `acer_wmi`, `facer`, or `linuwu_sense` driver is loaded. Resolve that conflict before installation; it does not unload another active controller automatically. The PredatorSense shortcut is a per-user setup: in GNOME Custom Shortcuts, use `/usr/bin/python3 /opt/neo-control/neo_control.py` as the command and press the PredatorSense button to bind it.
+Run the installer as your normal desktop user, not with `sudo ./install.sh`. It requests administrator authentication for the system step (sudo in a terminal, polkit otherwise), adds that user to `linuwu_sense`, and creates the desktop launcher. If an existing Acer driver is loaded, it leaves that driver running, installs Neo Control for the next boot, and asks you to reboot. Otherwise it starts Neo Control immediately; log out/in if your group membership is new. No fan settings are automatically selected on installation.
 
-The installer builds with DKMS so future kernels can rebuild the module when their matching development files are available. Secure Boot signing/enrollment is not configured by this project; kernel lockdown was disabled during these tests.
+After reboot, open **Neo Control** in the application menu. Check the installation with:
+
+```sh
+systemctl status neo-control.service --no-pager
+python3 /opt/neo-control/neo_control.py --diagnose
+```
+
+### Kernel and boot support
+
+DKMS builds against the actual installed kernel headers. The Makefile reads the target kernel's `CONFIG_CC_IS_CLANG` setting and uses `LLVM=1` for Clang/LTO builds. Install headers for **every kernel you intend to boot**; DKMS can only rebuild for kernels with matching headers. The installer initially builds for the running kernel. Before booting another already-installed kernel, install its headers and run `sudo dkms autoinstall -k <kernel-release>` for that exact release; confirm it is listed as installed by `dkms status`. Custom kernels may need additional toolchain dependencies.
+
+The installer blacklists competing Acer control modules and refreshes the boot images. On CachyOS/Arch it selects the available Limine wrapper, mkinitcpio, dracut, or booster using the same priority as CachyOS's `update-initramfs` helper. This also runs when uninstalling, to remove this project's blacklist from boot images. If boot-image generation fails, fix the reported error and rerun the installer before rebooting.
+
+Secure Boot module signing/key enrollment is **not** configured automatically. If the service reports `Key was rejected by service` or `Required key not available`, configure DKMS signing and enroll the key using your distro's Secure Boot procedure. Check `journalctl -u neo-control.service -b` and the kernel log for the actual failure. Kernel lockdown was disabled during the original Fedora tests.
+
+If a competing Acer driver still loads after reboot, check for an explicit entry in `/etc/modules-load.d/`, `/etc/mkinitcpio.conf` or another control application's service. A blacklist cannot override every explicit load request. The service refuses to load a second controller over an active one.
+
+### PredatorSense button on your new desktop
+
+Create a keyboard shortcut that runs `/usr/bin/python3 /opt/neo-control/neo_control.py`, then press your PredatorSense button to assign it. On this laptop it reports `XF86Launch1`. In GNOME use **Settings → Keyboard → Custom Shortcuts**; in KDE Plasma use **System Settings → Keyboard → Shortcuts** and add the Neo Control application or command. Desktop preferences from the Fedora installation do not transfer automatically to CachyOS.
+
+### Fedora and existing installations
+
+The same `./install.sh --install-deps`, `./install.sh --check`, and `./install.sh` commands work on Fedora. The dependency helper uses DNF with `kernel-devel` for the running kernel. For an update, first choose **Menu → Quit and restore Auto**, run `git pull --ff-only` in the checkout, then rerun the installer. The GUI must be restarted to pick up code changes.
+
+To preview the dependency command without installing anything: `python3 setup_support.py --dependency-command`. Preflight (`./install.sh --check`) reads system information without changing firmware, packages, or boot settings.
 
 Installed locations:
 
@@ -99,7 +136,7 @@ To build only: `make -C kernel`. To load only for the current boot: `pkexec /usr
 
 To inspect without changing settings: `python3 neo_control.py --diagnose`.
 
-To run software validation: `python3 -m unittest discover -s . -p test_gui.py`.
+To run software validation: `python3 -m unittest discover -s . -p 'test_*.py'`. Installer tests cover kernel variants, dependency selection, boot-manager selection, missing/mismatched headers and LLVM build selection, without installing packages or writing hardware settings.
 
 The scripts `verify_hardware.py` and `verify_extras.py` actively change real hardware settings temporarily and restore their recorded initial profile/lighting/limit. They are development checks, not startup routines. The fan test intentionally ends in Auto.
 
@@ -128,3 +165,16 @@ Visual reference: Acer PHN16-71 user manual, pages 46 and 54, [official PDF](htt
 `dbus-run-session -- python3 test_lifecycle.py` checks native GTK window hiding, retained fan ownership and target controller, heartbeat while hidden, reopening the same window, and explicit Quit restoring Auto. Hardware writes are mocked in this lifecycle check.
 
 The background-close change passed the mocked GTK lifecycle check. An uninterrupted hidden-window hardware test beyond the 45-second watchdog timeout has not yet been completed.
+
+### Distribution integration references
+
+- [CachyOS kernel packaging](https://github.com/CachyOS/linux-cachyos/blob/master/linux-cachyos/PKGBUILD): kernel `pkgbase` and per-kernel headers.
+- [CachyOS boot-image helper](https://github.com/CachyOS/cachyos-hooks/blob/master/update-initramfs): boot-manager-specific regeneration order.
+- [Arch DKMS packaging guidance](https://wiki.archlinux.org/title/DKMS_package_guidelines): per-kernel headers and pacman DKMS hooks.
+- [Arch PyGObject](https://archlinux.org/packages/extra/x86_64/python-gobject/) and [Cairo bindings](https://archlinux.org/packages/extra/x86_64/python-cairo/): native GUI packages.
+
+### Distribution checks, 23 October 2026
+
+All 36 software tests passed on Fedora and in a clean Arch container. The driver built against Fedora 7.2.11 and Arch 7.2.11 kernel headers. In the container, DKMS built and installed the driver for the official CachyOS `7.2.7-1-cachyos` headers, selecting LLVM for the kernel's Clang/ThinLTO configuration. GTK4/Cairo imports, the complete window-close/reopen/quit lifecycle under Xvfb, and systemd unit validation passed. The CachyOS build warned that the container's Clang 23 differed from the kernel's Clang 22; compilation and DKMS installation still succeeded.
+
+These are build and isolated GUI tests, **not a booted CachyOS hardware test**. No test module was loaded into the host kernel, and firmware writes were mocked in GUI tests. Boot-image regeneration, Secure Boot enrollment and real fans/RGB on CachyOS still need verification on the laptop after installing that OS. See `evidence/distro-compatibility.json` for versions and test scope.
