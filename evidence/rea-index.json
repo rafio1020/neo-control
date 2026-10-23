@@ -1,0 +1,46 @@
+{
+  "hardware": {
+    "path": "<local-package>/Predator Sense_Acer_4.1.635_W11x64_A/PredatorSense-4.1.635/AgentService/driver/AcerHardwareService.exe",
+    "sha256": "1ef67e11e4f05cb50a2d1e4ca9cd5c8e58de83f05234da2d8281da178dcc83ea"
+  },
+  "keyboard": {
+    "path": "<local-package>/Predator Sense_Acer_4.1.635_W11x64_A/PredatorSense-4.1.635/AgentService/driver/AcerECKeyboardController.dll",
+    "sha256": "a673ca8c3f85585ecc4e0a844a30ccd1d2a18558503888b6e536c36057f8d9a2"
+  },
+  "model_config": {
+    "path": "<local-package>/Predator Sense_Acer_4.1.635_W11x64_A/PredatorSense-4.1.635/AgentService/driver/Predator PHN16-71.ini",
+    "sha256": "b134f7fe854f6a72eb80fb1ba60d03e8db2a541126ff368e6641167a95560f24"
+  },
+  "asar": {
+    "path": "<local-analysis>/rea-analysis/appx/app/resources/app.asar",
+    "sha256": "5e42f823c1e6c86f89409da2823e6b5604e65c7615034205dafdd294e3e90e8b"
+  },
+  "main_js": {
+    "path": "<local-analysis>/rea-analysis/extracted/main.js",
+    "sha256": "52c9d4a4bb1baaf5f1cfd64bd14d3c6a88ea2c7dae6f6060e225f8fed69b786d"
+  },
+  "js": {
+    "evidence_id": "ev_6a346f6bb181a36749e13c0fb0c2383dc89397ddc334a372a4750919c423c2f0",
+    "path": "<local-analysis>/rea-analysis/main-js-evidence.json"
+  },
+  "hardware_strings": {
+    "evidence_id": "ev_c26e6f4ff7a0140cc14ee7c4111cb4e102615ed272d51fc1ed73d89456405b92",
+    "path": "<local-analysis>/rea-analysis/native-strings.json"
+  },
+  "keyboard_modes": {
+    "evidence_id": "ev_40a1dd0bdd68db332c0ba8793c33dcc928f712c36faa560e05ecdb1eb72c03df",
+    "path": "<local-analysis>/rea-analysis/keyboard-modes.json"
+  },
+  "keyboard_setmode": {
+    "evidence_id": "ev_9b632072c32456a48c6ad7401826614d30822981a788dbadd71da4b1394b572a",
+    "path": "<local-analysis>/rea-analysis/keyboard-setmode.json"
+  },
+  "asar_inventory": {
+    "evidence_id": "ev_b827361015a0ee52b0de064caffb4300c51cef731f36203174bfcc7dcc126cc7",
+    "path": "<local-analysis>/rea-analysis/asar-inventory.json"
+  },
+  "asar_extract": {
+    "evidence_id": "ev_dda30445bdae3de22cdbaa99674c3f9ca1a4f193afb2b4ebbcb0ae57a3621f20",
+    "path": "<local-analysis>/rea-analysis/asar-extraction.json"
+  }
+}

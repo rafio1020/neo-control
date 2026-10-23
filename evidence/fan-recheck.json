@@ -1,0 +1,107 @@
+[
+  {
+    "step": "before",
+    "time": 1792571025.9799237,
+    "status": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 3075,
+      "gpu_rpm": 3024,
+      "cpu_mode": 1,
+      "gpu_mode": 1,
+      "cpu_percent": 55,
+      "gpu_percent": 65
+    },
+    "cpu_temperature": 69.0
+  },
+  {
+    "step": "max_4s",
+    "time": 1792571030.060413,
+    "status": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 7812,
+      "gpu_rpm": 7069,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 55,
+      "gpu_percent": 65
+    },
+    "cpu_temperature": 60.0
+  },
+  {
+    "step": "max_8s",
+    "time": 1792571034.1232312,
+    "status": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 7784,
+      "gpu_rpm": 7069,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 55,
+      "gpu_percent": 65
+    },
+    "cpu_temperature": 57.0
+  },
+  {
+    "step": "max_12s",
+    "time": 1792571038.1910162,
+    "status": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 7784,
+      "gpu_rpm": 7046,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 55,
+      "gpu_percent": 65
+    },
+    "cpu_temperature": 65.0
+  },
+  {
+    "step": "manual_60_4s",
+    "time": 1792571042.300658,
+    "status": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 5431,
+      "gpu_rpm": 4578,
+      "cpu_mode": 3,
+      "gpu_mode": 3,
+      "cpu_percent": 60,
+      "gpu_percent": 60
+    },
+    "cpu_temperature": 68.0
+  },
+  {
+    "step": "manual_60_8s",
+    "time": 1792571046.3364692,
+    "status": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 5445,
+      "gpu_rpm": 4568,
+      "cpu_mode": 3,
+      "gpu_mode": 3,
+      "cpu_percent": 60,
+      "gpu_percent": 60
+    },
+    "cpu_temperature": 68.0
+  },
+  {
+    "step": "restored_auto",
+    "time": 1792571046.4268231,
+    "status": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 5445,
+      "gpu_rpm": 4568,
+      "cpu_mode": 1,
+      "gpu_mode": 1,
+      "cpu_percent": 60,
+      "gpu_percent": 60
+    },
+    "cpu_temperature": 68.0
+  }
+]

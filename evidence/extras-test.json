@@ -1,0 +1,168 @@
+[
+  {
+    "step": "baseline",
+    "lighting": {
+      "mode": 0,
+      "speed": 0,
+      "brightness": 100,
+      "direction": 0,
+      "red": 0,
+      "green": 174,
+      "blue": 199
+    },
+    "zones": {
+      "colors": [
+        "00aec7",
+        "00aec7",
+        "00aec7",
+        "00aec7"
+      ],
+      "brightness": 100
+    },
+    "battery_limit": 0
+  },
+  {
+    "step": "battery_limit_toggled",
+    "value": 1
+  },
+  {
+    "step": "red_static",
+    "lighting": {
+      "mode": 0,
+      "speed": 0,
+      "brightness": 50,
+      "direction": 0,
+      "red": 255,
+      "green": 0,
+      "blue": 0
+    },
+    "zones": {
+      "colors": [
+        "ff0000",
+        "ff0000",
+        "ff0000",
+        "ff0000"
+      ],
+      "brightness": 50
+    }
+  },
+  {
+    "step": "effect_1",
+    "lighting": {
+      "mode": 1,
+      "speed": 4,
+      "brightness": 50,
+      "direction": 0,
+      "red": 180,
+      "green": 40,
+      "blue": 120
+    }
+  },
+  {
+    "step": "effect_2",
+    "lighting": {
+      "mode": 2,
+      "speed": 4,
+      "brightness": 50,
+      "direction": 0,
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    }
+  },
+  {
+    "step": "effect_3",
+    "lighting": {
+      "mode": 3,
+      "speed": 4,
+      "brightness": 50,
+      "direction": 1,
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    }
+  },
+  {
+    "step": "effect_4",
+    "lighting": {
+      "mode": 4,
+      "speed": 4,
+      "brightness": 50,
+      "direction": 1,
+      "red": 180,
+      "green": 40,
+      "blue": 120
+    }
+  },
+  {
+    "step": "effect_5",
+    "lighting": {
+      "mode": 5,
+      "speed": 4,
+      "brightness": 50,
+      "direction": 0,
+      "red": 180,
+      "green": 40,
+      "blue": 120
+    }
+  },
+  {
+    "step": "effect_6",
+    "lighting": {
+      "mode": 6,
+      "speed": 4,
+      "brightness": 50,
+      "direction": 0,
+      "red": 180,
+      "green": 40,
+      "blue": 120
+    }
+  },
+  {
+    "step": "effect_7",
+    "lighting": {
+      "mode": 7,
+      "speed": 4,
+      "brightness": 50,
+      "direction": 0,
+      "red": 180,
+      "green": 40,
+      "blue": 120
+    }
+  },
+  {
+    "step": "four_zones",
+    "zones": {
+      "colors": [
+        "ff0000",
+        "00ff00",
+        "0000ff",
+        "ffffff"
+      ],
+      "brightness": 50
+    }
+  },
+  {
+    "step": "restored",
+    "lighting": {
+      "mode": 0,
+      "speed": 0,
+      "brightness": 100,
+      "direction": 0,
+      "red": 0,
+      "green": 174,
+      "blue": 199
+    },
+    "zones": {
+      "colors": [
+        "00aec7",
+        "00aec7",
+        "00aec7",
+        "00aec7"
+      ],
+      "brightness": 100
+    },
+    "battery_limit": 0,
+    "errors": []
+  }
+]

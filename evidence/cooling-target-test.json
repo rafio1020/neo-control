@@ -1,0 +1,134 @@
+[
+  {
+    "timestamp": 1792572120.323458,
+    "driver": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 2507,
+      "gpu_rpm": 2607,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 50,
+      "gpu_percent": 50
+    },
+    "cpu_temperature": 51.0,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "temperature": "50",
+      "load": "0",
+      "clock": "210",
+      "power": "1.73"
+    },
+    "cooling_target": "45\u00b0C target \u00b7 51\u00b0C hottest \u00b7 Above target \u00b7 Maximum cooling"
+  },
+  {
+    "timestamp": 1792572126.619154,
+    "driver": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 7784,
+      "gpu_rpm": 7023,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 50,
+      "gpu_percent": 50
+    },
+    "cpu_temperature": 52.0,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "temperature": "50",
+      "load": "0",
+      "clock": "210",
+      "power": "1.74"
+    },
+    "cooling_target": "45\u00b0C target \u00b7 52\u00b0C hottest \u00b7 Above target \u00b7 Maximum cooling"
+  },
+  {
+    "timestamp": 1792572132.9186056,
+    "driver": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 7756,
+      "gpu_rpm": 7046,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 50,
+      "gpu_percent": 50
+    },
+    "cpu_temperature": 52.0,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "temperature": "49",
+      "load": "0",
+      "clock": "210",
+      "power": "1.71"
+    },
+    "cooling_target": "45\u00b0C target \u00b7 52\u00b0C hottest \u00b7 Above target \u00b7 Maximum cooling"
+  },
+  {
+    "timestamp": 1792572139.173828,
+    "driver": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 7756,
+      "gpu_rpm": 7046,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 50,
+      "gpu_percent": 50
+    },
+    "cpu_temperature": 50.0,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "temperature": "48",
+      "load": "0",
+      "clock": "210",
+      "power": "1.66"
+    },
+    "cooling_target": "45\u00b0C target \u00b7 50\u00b0C hottest \u00b7 Above target \u00b7 Maximum cooling"
+  },
+  {
+    "timestamp": 1792572145.446781,
+    "driver": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 7756,
+      "gpu_rpm": 7023,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 50,
+      "gpu_percent": 50
+    },
+    "cpu_temperature": 57.0,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "temperature": "48",
+      "load": "0",
+      "clock": "210",
+      "power": "1.73"
+    },
+    "cooling_target": "45\u00b0C target \u00b7 57\u00b0C hottest \u00b7 Above target \u00b7 Maximum cooling"
+  },
+  {
+    "timestamp": 1792572151.68272,
+    "driver": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 7728,
+      "gpu_rpm": 7046,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 50,
+      "gpu_percent": 50
+    },
+    "cpu_temperature": 54.0,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "temperature": "48",
+      "load": "0",
+      "clock": "210",
+      "power": "1.72"
+    },
+    "cooling_target": "45\u00b0C target \u00b7 54\u00b0C hottest \u00b7 Above target \u00b7 Maximum cooling"
+  }
+]

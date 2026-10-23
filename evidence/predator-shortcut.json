@@ -1,0 +1,15 @@
+{
+  "device": "AT Translated Set 2 keyboard",
+  "scan_code_hex": "0xf5",
+  "linux_key_code": 148,
+  "key_name": "KEY_PROG1",
+  "keysym": "XF86Launch1",
+  "gnome_path": "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/neo-control/",
+  "settings": {
+    "name": "Neo Control \u2014 PredatorSense button",
+    "command": "/usr/bin/python3 /opt/neo-control/neo_control.py",
+    "binding": "XF86Launch1"
+  },
+  "physical_press_confirmed": true,
+  "user_confirmation": "Neo Control opened/came forward"
+}

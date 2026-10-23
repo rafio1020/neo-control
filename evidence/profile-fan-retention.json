@@ -1,0 +1,93 @@
+[
+  {
+    "step": "max_retained_profile_1",
+    "status": {
+      "profile": 1,
+      "profile_mask": 115,
+      "cpu_rpm": 7784,
+      "gpu_rpm": 6717,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 70,
+      "gpu_percent": 70
+    }
+  },
+  {
+    "step": "max_retained_profile_4",
+    "status": {
+      "profile": 4,
+      "profile_mask": 115,
+      "cpu_rpm": 7756,
+      "gpu_rpm": 7046,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 70,
+      "gpu_percent": 70
+    }
+  },
+  {
+    "step": "max_retained_profile_5",
+    "status": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 7756,
+      "gpu_rpm": 7046,
+      "cpu_mode": 2,
+      "gpu_mode": 2,
+      "cpu_percent": 70,
+      "gpu_percent": 70
+    }
+  },
+  {
+    "step": "manual_retained_balanced",
+    "status": {
+      "profile": 1,
+      "profile_mask": 115,
+      "cpu_rpm": 5061,
+      "gpu_rpm": 4889,
+      "cpu_mode": 3,
+      "gpu_mode": 3,
+      "cpu_percent": 55,
+      "gpu_percent": 65
+    }
+  },
+  {
+    "step": "auto_profile_0",
+    "status": {
+      "profile": 0,
+      "profile_mask": 115,
+      "cpu_rpm": 5073,
+      "gpu_rpm": 4979,
+      "cpu_mode": 1,
+      "gpu_mode": 1,
+      "cpu_percent": 55,
+      "gpu_percent": 65
+    }
+  },
+  {
+    "step": "auto_profile_6",
+    "status": {
+      "profile": 6,
+      "profile_mask": 115,
+      "cpu_rpm": 5272,
+      "gpu_rpm": 5297,
+      "cpu_mode": 1,
+      "gpu_mode": 1,
+      "cpu_percent": 55,
+      "gpu_percent": 65
+    }
+  },
+  {
+    "step": "restored_auto_original_profile",
+    "status": {
+      "profile": 5,
+      "profile_mask": 115,
+      "cpu_rpm": 5644,
+      "gpu_rpm": 5600,
+      "cpu_mode": 1,
+      "gpu_mode": 1,
+      "cpu_percent": 55,
+      "gpu_percent": 65
+    }
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "observations": [
+    {
+      "elapsed_seconds": 0,
+      "timestamp": 1792572392.6190548,
+      "status": {
+        "profile": 5,
+        "profile_mask": 115,
+        "cpu_rpm": 7784,
+        "gpu_rpm": 7023,
+        "cpu_mode": 2,
+        "gpu_mode": 2,
+        "cpu_percent": 50,
+        "gpu_percent": 50
+      }
+    },
+    {
+      "elapsed_seconds": 20,
+      "timestamp": 1792572412.6902378,
+      "status": {
+        "profile": 5,
+        "profile_mask": 115,
+        "cpu_rpm": 6696,
+        "gpu_rpm": 5827,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 50,
+        "gpu_percent": 50
+      }
+    },
+    {
+      "elapsed_seconds": 40,
+      "timestamp": 1792572432.7524939,
+      "status": {
+        "profile": 5,
+        "profile_mask": 115,
+        "cpu_rpm": 1903,
+        "gpu_rpm": 2059,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 50,
+        "gpu_percent": 50
+      }
+    },
+    {
+      "elapsed_seconds": 60,
+      "timestamp": 1792572452.832426,
+      "status": {
+        "profile": 5,
+        "profile_mask": 115,
+        "cpu_rpm": 1903,
+        "gpu_rpm": 2053,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 50,
+        "gpu_percent": 50
+      }
+    }
+  ],
+  "user_confirmation": "Yes, I changed a setting",
+  "interpretation": "User deliberately stopped target cooling during this check. Auto transition is expected; this does not establish an uninterrupted target lease beyond 45 seconds."
+}

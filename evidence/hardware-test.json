@@ -1,0 +1,247 @@
+{
+  "events": [
+    {
+      "step": "baseline",
+      "timestamp": 1792569713.3216743,
+      "firmware": {
+        "profile": 1,
+        "profile_mask": 115,
+        "cpu_rpm": 1949,
+        "gpu_rpm": 2049,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 70,
+        "gpu_percent": 70
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 70000000
+      }
+    },
+    {
+      "step": "maximum_after_8s",
+      "timestamp": 1792569721.448993,
+      "firmware": {
+        "profile": 1,
+        "profile_mask": 115,
+        "cpu_rpm": 7784,
+        "gpu_rpm": 7046,
+        "cpu_mode": 2,
+        "gpu_mode": 2,
+        "cpu_percent": 70,
+        "gpu_percent": 70
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 70000000
+      }
+    },
+    {
+      "step": "manual_55_65_after_8s",
+      "timestamp": 1792569729.6105952,
+      "firmware": {
+        "profile": 1,
+        "profile_mask": 115,
+        "cpu_rpm": 5073,
+        "gpu_rpm": 4900,
+        "cpu_mode": 3,
+        "gpu_mode": 3,
+        "cpu_percent": 55,
+        "gpu_percent": 65
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 70000000
+      }
+    },
+    {
+      "step": "lease_expired",
+      "timestamp": 1792569772.663983,
+      "firmware": {
+        "profile": 1,
+        "profile_mask": 115,
+        "cpu_rpm": 4834,
+        "gpu_rpm": 4647,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 55,
+        "gpu_percent": 65
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 70000000
+      }
+    },
+    {
+      "step": "automatic",
+      "timestamp": 1792569772.7127829,
+      "firmware": {
+        "profile": 1,
+        "profile_mask": 115,
+        "cpu_rpm": 4834,
+        "gpu_rpm": 4647,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 55,
+        "gpu_percent": 65
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 70000000
+      }
+    },
+    {
+      "step": "profile_0",
+      "timestamp": 1792569773.7871153,
+      "firmware": {
+        "profile": 0,
+        "profile_mask": 115,
+        "cpu_rpm": 4520,
+        "gpu_rpm": 4312,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 55,
+        "gpu_percent": 65
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 45000000
+      }
+    },
+    {
+      "step": "profile_1",
+      "timestamp": 1792569774.8652835,
+      "firmware": {
+        "profile": 1,
+        "profile_mask": 115,
+        "cpu_rpm": 4178,
+        "gpu_rpm": 4045,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 55,
+        "gpu_percent": 65
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 70000000
+      }
+    },
+    {
+      "step": "profile_4",
+      "timestamp": 1792569775.9309537,
+      "firmware": {
+        "profile": 4,
+        "profile_mask": 115,
+        "cpu_rpm": 3857,
+        "gpu_rpm": 3857,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 55,
+        "gpu_percent": 65
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 80000000
+      }
+    },
+    {
+      "step": "profile_5",
+      "timestamp": 1792569776.9988744,
+      "firmware": {
+        "profile": 5,
+        "profile_mask": 115,
+        "cpu_rpm": 3978,
+        "gpu_rpm": 4060,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 55,
+        "gpu_percent": 65
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 100000000
+      }
+    },
+    {
+      "step": "profile_6",
+      "timestamp": 1792569778.0654447,
+      "firmware": {
+        "profile": 6,
+        "profile_mask": 115,
+        "cpu_rpm": 3949,
+        "gpu_rpm": 4000,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 55,
+        "gpu_percent": 65
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 70000000
+      }
+    },
+    {
+      "step": "restored",
+      "timestamp": 1792569778.1485827,
+      "firmware": {
+        "profile": 1,
+        "profile_mask": 115,
+        "cpu_rpm": 3949,
+        "gpu_rpm": 4000,
+        "cpu_mode": 1,
+        "gpu_mode": 1,
+        "cpu_percent": 55,
+        "gpu_percent": 65
+      },
+      "cpu_power_limits_uw": {
+        "/sys/class/powercap/intel-rapl:0:0/constraint_0_power_limit_uw": 0,
+        "/sys/class/powercap/intel-rapl:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl:0/constraint_0_power_limit_uw": 65000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_2_power_limit_uw": 200000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_1_power_limit_uw": 157000000,
+        "/sys/class/powercap/intel-rapl-mmio:0/constraint_0_power_limit_uw": 70000000
+      }
+    }
+  ],
+  "restore_errors": []
+}

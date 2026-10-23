@@ -1,0 +1,47 @@
+{
+  "model": "Predator PHN16-71",
+  "kernel": "7.2.11-200.fc44.x86_64",
+  "driver_path": "/sys/devices/platform/neo-control",
+  "timestamp": 1792570221.402792,
+  "driver": {
+    "profile": 1,
+    "profile_mask": 115,
+    "cpu_rpm": 1911,
+    "gpu_rpm": 2067,
+    "cpu_mode": 1,
+    "gpu_mode": 1,
+    "cpu_percent": 55,
+    "gpu_percent": 65
+  },
+  "driver_error": null,
+  "cpu_temperature": 80.0,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "temperature": "56",
+    "load": "0",
+    "clock": "210",
+    "power": "1.95"
+  },
+  "battery": "57% \u00b7 Charging",
+  "ac_online": true,
+  "optional_errors": {},
+  "battery_limit": 0,
+  "lighting": {
+    "mode": 0,
+    "speed": 0,
+    "brightness": 100,
+    "direction": 0,
+    "red": 0,
+    "green": 174,
+    "blue": 199
+  },
+  "zones": {
+    "colors": [
+      "00AEC7",
+      "00AEC7",
+      "00AEC7",
+      "00AEC7"
+    ],
+    "brightness": 100
+  }
+}

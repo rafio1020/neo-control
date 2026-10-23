@@ -1,0 +1,21 @@
+{
+  "source": "<local-analysis>/rea-analysis/extracted/dist/widgets/main/main.05d56004d43d496a.js",
+  "sha256": "77ae35da034c2dc1bc88bf96d33d2bfb5c7a4cfe6333e33c0bae6efc9eeb6106",
+  "scope": "Static renderer inspection; Windows binaries not executed. Native service side effects are not fully traced.",
+  "locations": {
+    "get IsV2023(){return!0}": 583149,
+    "setACMode(t){": 850727,
+    "CheckFanControl(e,r,a){": 602388,
+    "customFanValueChange(t,e){": 866175,
+    "GPU_customFanValueChange(t,e){": 867376
+  },
+  "observations": [
+    "Active system screen selects the V2023 app-mode-nitro component because IsV2023 returns true.",
+    "Active setACMode explicitly requests Auto for Quiet; it does not explicitly request Maximum for Turbo.",
+    "Legacy app-mode explicitly requests Maximum for Turbo but is not the active V2023 screen.",
+    "CheckFanControl requests Maximum for the TurboButton lock path; newer configurable mode-switch key paths can differ.",
+    "Custom CPU/GPU sliders send changes immediately and support independent Auto toggles.",
+    "Neo Control differs: manual sliders require Apply, both fans share Auto/Maximum/manual modes, closing restores Auto, no physical hotkey handler."
+  ],
+  "follow_up": "Historical Neo Control comparison predates the background-close fix and GNOME PredatorSense shortcut. Current behavior is documented in README.md."
+}
