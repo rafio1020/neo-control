@@ -1,7 +1,7 @@
 {
   ".gitignore": "7137ed5feedebd50401a76c04425d2432a3569d73a719535d20cdd309e4ccb11",
   "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
-  "README.md": "2fb7933ebfd4b5f51d37dd263b692f2b7523d2854685c936de851dec613a8c89",
+  "README.md": "6cf84f7bc232681a3f1a6ad03c058e40b04244a44544d6672b235df14baedf53",
   "design-qa.md": "27ef40095a628f1aed84706015ed4fd70af5b7923587980bd245bf14ef4cc465",
   "evidence/acer-hardware-rea.json": "bb2321d20bcc5b963c45492cb01faa4ff589f4899beed797501435f7d007a59b",
   "evidence/cooling-target-test.json": "5de8eeb9557ecd537fa88c7c79325a7c073e494632317ffb5c2b12264b17b0ab",
@@ -43,5 +43,6 @@
   "uninstall-system.sh": "9c4eec8c25225cc9513e33b615d151c486ef8f0cceac5239979cde14bcd7cc7e",
   "uninstall.sh": "d6557d5702c24646a607d8f41e1824d82f2541cb6f0dd7c19f2054cbaf8106a1",
   "verify_extras.py": "6dbbd88e9175216aeb8a5a4963774bc212eb51bec8a77ab7bb13bfb4b954a01d",
-  "verify_hardware.py": "f5eddd2135a8cdb33a7c16ac63a3dbc76788c60bc335318281a7c00ec97e214a"
+  "verify_hardware.py": "f5eddd2135a8cdb33a7c16ac63a3dbc76788c60bc335318281a7c00ec97e214a",
+  "README-CACHYOS.md": "47b7f2e65f46797f184f2c200aa406af9efe179c75e5e691e48d8d5e3e240563"
 }

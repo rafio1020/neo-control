@@ -6,6 +6,8 @@ A native GTK4 Linux control panel and a small, model-specific firmware driver, b
 
 **Experimental: verified on one PHN16-71. Other models are deliberately rejected by the driver.**
 
+**Installing on CachyOS? Start with the [CachyOS setup guide](README-CACHYOS.md).**
+
 ## Use
 
 Open **Neo Control** from the application menu after installation. The native interface now has **Overview**, **Fan Control**, **Lighting**, and **Battery** tabs, live circular temperature/RPM gauges, and a persistent monitoring sidebar. Its black/cyan visual direction is based on the PHN16-71 manual’s PredatorSense screens; it remains independently branded. It offers:
